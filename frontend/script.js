@@ -142,7 +142,6 @@ document
 (event)=>{
 
     if(event.key === "Enter"){
-
         calculate("add");
     }
 
