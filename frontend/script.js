@@ -114,36 +114,25 @@ document
             calculate("divide");
         }
     );
-    document
-.getElementById("clearBtn")
-.addEventListener(
-"click",
-()=>{
-
-    document
-    .getElementById("num1")
-    .value = "";
-
-    document
-    .getElementById("num2")
-    .value = "";
-
-    result.innerText =
-    "Waiting for inputs...";
-
-    result.style.color =
-    "black";
-
-}
-);
 document
-.addEventListener(
-"keydown",
-(event)=>{
+    .getElementById("clearBtn")
+    .addEventListener(
+        "click",
+        () => {
 
-    if(event.key === "Enter"){
-        calculate("add");
-    }
+            document
+                .getElementById("num1")
+                .value = "";
 
-}
-);
+            document
+                .getElementById("num2")
+                .value = "";
+
+            result.innerText =
+                "Waiting for inputs...";
+
+            result.style.color =
+                "black";
+
+        }
+    );

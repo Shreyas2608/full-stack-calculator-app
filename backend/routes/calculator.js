@@ -3,6 +3,17 @@ const router = express.Router();
 
 router.post('/calculate', (req, res) => {
     const { num1, num2, operation } = req.body;
+    if (
+        typeof num1 !== "number" ||
+        typeof num2 !== "number" ||
+        isNaN(num1) ||
+        isNaN(num2)
+    ) {
+        return res.status(400).json({
+            error:
+                "Please provide valid numbers"
+        });
+    }
     let result;
     if (operation === 'add') {
         result = num1 + num2;

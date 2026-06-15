@@ -72,7 +72,7 @@ button:hover {
     margin-top: 10px;
     font-size: 20px;
     font-weight: bold;
-    mnin-height: 40px;
+    min-height: 40px;
 }
 
 @media(max-width:500px) {
