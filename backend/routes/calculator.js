@@ -17,7 +17,28 @@ router.post('/calculate', (req, res) => {
     let result;
     if (operation === 'add') {
         result = num1 + num2;
-    } else if (operation === 'subtract') {
+    }
+    else if (operation === "sqrt") {
+        if (num1 < 0) {
+            return res.status(400).json({
+                error:
+                    "Cannot calculate square root of negative number"
+            });
+        }
+        result = Math.sqrt(num1);
+    }
+    else if (operation === "percentage") {
+        result = (num1 / 100) * num2;
+    }
+    else if (operation === "power") {
+        result =
+            Math.pow(num1, num2);
+    }
+    else if (operation === "modulus") {
+        result =
+            num1 % num2;
+    }
+    else if (operation === 'subtract') {
         result = num1 - num2;
     } else if (operation === 'multiply') {
         result = num1 * num2;
